@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Message.destroy_all
+Message.create!([{
+  language: "Chinese",
+  greeting: "nǐn hǎo.",
+},
+{
+  language: "German",
+  greeting: "guten tag",
+},
+{
+  language: "Portuguese",
+  greeting: "olá",
+},
+{
+  language: "Japanese",
+  greeting: "konnichiwa",
+},
+{
+  language: "Ebira",
+  greeting: "Etemeya",
+},
+{
+  language: "English",
+  greeting: "Hello",
+},
+])
+p "Created #{Message.count} greetings"
